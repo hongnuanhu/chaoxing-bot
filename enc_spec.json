@@ -1,0 +1,17 @@
+{
+  "template": "{clazzid}[{userid}][{jobid}][{objectid}][{playing_ms}][{d}][{duration}]",
+  "playing_unit": "s",
+  "referer": "https://mooc1-1.chaoxing.com/",
+  "dry": true,
+  "tasks": [
+    {
+      "jobid": "JOB_ID",
+      "objectid": "OBJECT_ID",
+      "clazzid": "CLAZZ_ID",
+      "userid": "USER_ID",
+      "duration": 600,
+      "step": 60,
+      "sleep": 1.0
+    }
+  ]
+}

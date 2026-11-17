@@ -1,0 +1,38 @@
+# ---- 凭据 / 个人数据：绝对不要提交 ----
+# Chromium 用户数据目录，内含学习通登录 cookie（等于账号凭据）
+cx_profile
+# 你的课程进度记录
+progress.json
+# 抓包样本，query 与 cookie 里有你的 uid / enc
+enc_samples.json
+# 你的真实课程链接（courseId / clazzid / enc）
+urls.txt
+# 从页面抓下来的第三方 JS（版权不归你）
+js_dump
+*.har
+*.cookie
+cookies*.txt
+.env
+.env.*
+
+# ---- 运行时产物 ----
+__pycache__/
+*.py[cod]
+*.pyo
+.venv
+venv
+.pytest_cache/
+.mypy_cache/
+*.log
+
+# ---- 系统 / 编辑器 ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# ---- 媒体测试素材 ----
+tests/fixture/
+*.mp4
+*.webm
