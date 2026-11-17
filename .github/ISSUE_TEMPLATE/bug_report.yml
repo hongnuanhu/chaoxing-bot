@@ -1,0 +1,65 @@
+name: Bug 报告
+description: 脚本没反应 / 进度不涨 / 环境报错
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **贴日志前先脱敏**：删掉 URL 里的 `enc=`、`e=` 参数，删掉 cookie、`userid`、`token`。
+        带凭据的 issue 会被直接删除。
+
+  - type: dropdown
+    id: route
+    attributes:
+      label: 用的是哪条路线
+      options:
+        - 路线一 Tampermonkey
+        - 路线二 Playwright（cx_play.py）
+        - 路线三 直发上报（cx_report.py）
+        - 离线测试 tests/test_userscript.py
+    validations:
+      required: true
+
+  - type: input
+    id: env
+    attributes:
+      label: 环境
+      description: 系统 + 浏览器 / Python 版本
+      placeholder: macOS 14.5 · Chrome 131 / Python 3.11
+    validations:
+      required: true
+
+  - type: textarea
+    id: expect
+    attributes:
+      label: 预期 vs 实际
+      placeholder: |
+        预期：视频自动播放并切下一节
+        实际：视频不动，控制台只有 bot ready
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 脱敏后的日志
+      description: 控制台里 `window.__CX_LOGS__.slice(-20)` 或终端最后 20 行
+      render: shell
+
+  - type: textarea
+    id: status
+    attributes:
+      label: 播放器状态
+      description: 课程页控制台执行 `JSON.stringify(window.__CX_STATUS__)` 的结果
+      render: json
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 已自查
+      options:
+        - label: 我跑过 `tests/test_userscript.py`，结果是通过
+        - label: 我看过 docs/troubleshooting.md
+        - label: 日志里没有 cookie / enc / userid 等凭据
+          required: true
