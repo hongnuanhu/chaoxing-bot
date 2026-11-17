@@ -1,6 +1,6 @@
 # chaoxing-bot · 学习通（超星）自动播放助手
 
-[![ci](https://github.com/USER/REPO/actions/workflows/ci.yml/badge.svg)](https://github.com/USER/REPO/actions/workflows/ci.yml)
+[![ci](https://github.com/s13753540656-sys/chaoxing-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/s13753540656-sys/chaoxing-bot/actions/workflows/ci.yml)
 ![python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![license](https://img.shields.io/badge/license-MIT-green)
 
@@ -29,7 +29,7 @@
 ## 安装
 
 ```bash
-git clone https://github.com/USER/REPO.git chaoxing-bot
+git clone https://github.com/s13753540656-sys/chaoxing-bot.git chaoxing-bot
 cd chaoxing-bot
 
 python3 -m venv .venv
